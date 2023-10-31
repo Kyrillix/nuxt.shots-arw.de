@@ -1,11 +1,11 @@
 <template>
-     <section v-html="$markdown.render(content)" />
+  <section v-html="$markdown.render(content)"/>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
 defineProps<{
-     content: String;
+  content: String;
 }>();
 </script>
 
-<style scoped lang="scss"></style>
+<style lang="scss" scoped></style>

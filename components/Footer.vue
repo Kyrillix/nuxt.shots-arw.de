@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 
 </script>
 
@@ -6,33 +6,39 @@
   <section id="socialmedia">
     <p>social media</p>
     <div class="socialmedia-links">
-      <a id="Instagram" title="Instagram" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/shots.arw/">
-        <i class="fa-brands fa-instagram" />
+      <a id="Instagram" href="https://www.instagram.com/shots.arw/" rel="noopener noreferrer" target="_blank"
+         title="Instagram">
+        <i class="fa-brands fa-instagram"/>
       </a>
-      <a id="YouTube" title="YouTube" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/@shots-arw">
-        <i class="fa-brands fa-youtube" />
+      <a id="YouTube" href="https://www.youtube.com/@shots-arw" rel="noopener noreferrer" target="_blank"
+         title="YouTube">
+        <i class="fa-brands fa-youtube"/>
       </a>
-      <a id="Xing" title="Xing" target="_blank" rel="noopener noreferrer" href="/">
-        <i class="fa-brands fa-square-xing" />
+      <a id="Xing" href="/" rel="noopener noreferrer" target="_blank" title="Xing">
+        <i class="fa-brands fa-square-xing"/>
       </a>
-      <a id="LinkedIn" title="LinkedIn" target="_blank" rel="noopener noreferrer" href="/">
-        <i class="fa-brands fa-linkedin" />
+      <a id="LinkedIn" href="/" rel="noopener noreferrer" target="_blank" title="LinkedIn">
+        <i class="fa-brands fa-linkedin"/>
       </a>
-      <a id="GitHub" title="GitHub" target="_blank" rel="noopener noreferrer" href="https://github.com/Kyrillix">
-        <i class="fa-brands fa-github" />
+      <a id="GitHub" href="https://github.com/Kyrillix" rel="noopener noreferrer" target="_blank" title="GitHub">
+        <i class="fa-brands fa-github"/>
       </a>
     </div>
   </section>
   <section id="links">
     <ul>
       <li>&copy; 2023 shots.arw</li>
-      <li><nuxt-link class="a" to="legalnotice">legalnotice</nuxt-link></li>
-      <li><nuxt-link class="a" to="privacy">privacy</nuxt-link></li>
+      <li>
+        <nuxt-link class="a" to="legalnotice">legalnotice</nuxt-link>
+      </li>
+      <li>
+        <nuxt-link class="a" to="privacy">privacy</nuxt-link>
+      </li>
     </ul>
   </section>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 #socialmedia {
   display: flex;
   grid-area: socialmedia;
@@ -104,6 +110,7 @@
     }
   }
 }
+
 #links {
   margin: 0;
   padding: 0;

@@ -1,15 +1,15 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 
 </script>
 
 <template>
   <section id="content">
-    <Navigation />
-    <Footer />
+    <Navigation/>
+    <Footer/>
   </section>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 #content {
   position: sticky;
   top: 0;

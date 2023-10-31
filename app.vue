@@ -1,7 +1,7 @@
 <template>
   <section id="app">
     <div class="fixed">
-      <Fixed />
+      <Fixed/>
     </div>
     <NuxtPage class="dynamic"/>
   </section>
@@ -21,15 +21,17 @@
 
   .fixed {
     grid-area: left;
+
     ::-webkit-scrollbar {
       display: none;
     }
   }
+
   .dynamic {
     grid-area: right;
   }
 }
 </style>
-<script setup lang="ts">
+<script lang="ts" setup>
 import Fixed from "~/components/Fixed.vue";
 </script>

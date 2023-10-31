@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 
 </script>
 
@@ -6,6 +6,6 @@
   <h1>Contact</h1>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 
 </style>

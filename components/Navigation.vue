@@ -1,33 +1,42 @@
 <template>
   <section id="navigation">
     <nav>
-      <nuxt-link to="/" class="logo">
-        <img src="../assets/img/S-Logo-outline.webp" alt="logo">
+      <nuxt-link class="logo" to="/">
+        <img alt="logo" src="../assets/img/S-Logo-outline.webp">
         <p>hots.arw</p>
       </nuxt-link>
       <ul>
-        <li><nuxt-link class="a" to="/"><i class="fa-solid fa-house nav-icon" />Home</nuxt-link></li>
-        <li><nuxt-link class="a" to="about"><i class="fa-solid fa-info nav-icon" />About</nuxt-link></li>
+        <li>
+          <nuxt-link class="a" to="/"><i class="fa-solid fa-house nav-icon"/>Home</nuxt-link>
+        </li>
+        <li>
+          <nuxt-link class="a" to="about"><i class="fa-solid fa-info nav-icon"/>About</nuxt-link>
+        </li>
         <li>
           <div class="dropdown a">
-            <button class="dropbtn" @click="toggleDropdown"><i class="fa-solid fa-bars nav-icon" />Services</button>
-            <div class="dropdown-content" v-if="showDropdown">
-              <nuxt-link class="a first" to="photography"><i class="fa-solid fa-camera nav-icon" />Photography</nuxt-link>
-              <nuxt-link class="a second" to="it"><i class="fa-solid fa-server nav-icon" />IT-Support</nuxt-link>
-              <nuxt-link class="a three" to="development"><i class="fa-solid fa-code nav-icon" />WebDev</nuxt-link>
+            <button class="dropbtn" @click="toggleDropdown"><i class="fa-solid fa-bars nav-icon"/>Services</button>
+            <div v-if="showDropdown" class="dropdown-content">
+              <nuxt-link class="a first" to="photography"><i class="fa-solid fa-camera nav-icon"/>Photography
+              </nuxt-link>
+              <nuxt-link class="a second" to="it"><i class="fa-solid fa-server nav-icon"/>IT-Support</nuxt-link>
+              <nuxt-link class="a three" to="development"><i class="fa-solid fa-code nav-icon"/>WebDev</nuxt-link>
             </div>
           </div>
         </li>
-        <li><nuxt-link class="a" to="contact"><i class="fa-solid fa-envelope nav-icon" />Kontakt</nuxt-link></li>
+        <li>
+          <nuxt-link class="a" to="contact"><i class="fa-solid fa-envelope nav-icon"/>Kontakt</nuxt-link>
+        </li>
         <li><p>|</p></li>
         <li class="a"><i class="fa-solid fa-language"/></li>
-        <li><ColorSwitch /></li>
+        <li>
+          <ColorSwitch/>
+        </li>
       </ul>
     </nav>
   </section>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 .a {
   text-decoration: none;
   color: var(--text);
@@ -36,8 +45,13 @@
   font-size: 16px;
 }
 
-i {font-size: 16px;}
-.nav-icon {margin-right: 5px;}
+i {
+  font-size: 16px;
+}
+
+.nav-icon {
+  margin-right: 5px;
+}
 
 #navigation {
   margin: 0;
@@ -126,10 +140,12 @@ i {font-size: 16px;}
       text-shadow: var(--hover-orange);
       color: var(--h2);
     }
+
     .second:hover {
       text-shadow: var(--hover-cyan);
       color: var(--cyan);
     }
+
     .three:hover {
       text-shadow: var(--hover-green);
       color: var(--green);
@@ -139,7 +155,7 @@ i {font-size: 16px;}
 </style>
 
 <script setup>
-import { ref } from 'vue';
+import {ref} from 'vue';
 
 const showDropdown = ref(false);
 

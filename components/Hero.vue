@@ -1,14 +1,13 @@
 <template>
   <section id="hero">
     <h1>Hero</h1>
-    <img :src="heroImage" alt="Hero Image" />
+    <img :src="heroImage" alt="Hero Image"/>
   </section>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import { onBeforeMount } from 'vue'
-import { useRoute } from 'vue-router'
+import {onBeforeMount, ref} from 'vue'
+import {useRoute} from 'vue-router'
 
 const heroImage = ref('')
 

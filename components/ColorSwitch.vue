@@ -1,16 +1,16 @@
 <template>
   <main>
     <button aria-label="Color Mode"
-      @click="onClick">
+            @click="onClick">
       <ColorScheme placeholder="...">
-        <i class="fa-solid fa-moon" v-if="colorMode.value === 'dark'" />
-        <i class="fa-solid fa-lightbulb" v-else />
+        <i v-if="colorMode.value === 'dark'" class="fa-solid fa-moon"/>
+        <i v-else class="fa-solid fa-lightbulb"/>
       </ColorScheme>
     </button>
   </main>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
 const colorMode = useColorMode();
 const onClick = () => (colorMode.preference = (colorMode.value === 'light' ? 'dark' : 'light'))
 
@@ -37,6 +37,7 @@ body {
   --hover-green: 0 0 5px #4FC679FF, 0 0 15px #4FC679FF, 0 0 25px #4FC679FF, 0 0 35px #4FC679FF, 2px 2px 2px rgba(79, 198, 121, 0);
   --hover-cyan: 0 0 5px #2FB5C7FF, 0 0 15px #2FB5C7FF, 0 0 25px #2FB5C7FF, 0 0 35px #2FB5C7FF, 2px 2px 2px rgba(47, 181, 199, 0);
 }
+
 .dark-mode body {
   --body-brighter: #1a1e25;
   --body: #13161b;
